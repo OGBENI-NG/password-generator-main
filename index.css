@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: #1C1C1C;
+    padding: 0;
+    font-family: 'Andika', sans-serif;
+}
+
+.container {
+    background: #1F2937;
+    padding: 3.125em  2.5em 4em;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.text-con {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 50px;
+}
+
+h1 span {
+    display: block;
+    font-weight: 700;
+    color: #4ADF86;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+   
+}
+
+p {
+    color: #D5D4D8;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 5px 0;
+    line-height: 20px;
+}
+
+button {
+    padding: 1em 0;
+    border: none;
+    border-radius: 6px; 
+    color: #F3F3F9;
+    background: #10B981;
+    width: 100%;
+    text-shadow: 0px 0px 1px #1C1C1C;
+    font-size: 1.2rem;
+    font-family: 'Andika', sans-serif;
+    margin-top: 10%;
+}
+
+button:active {
+    transform: translateY(4px);
+}
+
+button, .tooltips {
+    cursor: pointer;
+}
+
+button:hover {
+    background: #273549;
+    border: 0.5px solid #F3F3F9;
+    color: #4ADF86;
+}
+
+
+
+.password-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.tooltips {
+    width: 100%;
+    background-color: #273549;
+    color: #10B981;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    position: relative;
+    margin: 2em 0 0;
+    padding: .7em;
+    font-size: 1.5rem;
+    
+}
+
+.tooltipss {
+    margin-bottom: -1em;
+}
+
+.tooltips .tooltip-txt {
+    visibility: hidden;
+    width: 100%;
+    background-color: #ECFDF5;
+    color: #10B981;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    left: 0;
+    bottom: 120%;
+    padding: .75em;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+.tooltips .tooltip-txt::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #273549 transparent transparent transparent;
+}
+  
+.tooltips:hover .tooltip-txt {
+    display: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+footer {
+    text-align:  center;
+    background-color: #273549;
+    padding: 1em;
+    line-height: 1.2;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+footer h4 {
+    font-weight: 700;
+    color: #c4c4c4;
+    
+}
+
+footer  p {
+    font-size: .9rem;
+    color: #6a6a6a;
+  
+}
+
+@media (min-width: 786px) {
+
+
+    .container {
+        position: fixed;
+        width: 90%;
+        max-width: 550px;
+        border-radius: 5px;
+        left: 0;
+        top: 0;
+        right: 0;
+        margin: 2em auto;
+        background: #ECFDF5;
+        height: max-content;
+        
+    }
+
+    .text-con  {
+        margin-top: -7em;
+    }
+
+    .tooltipss  {
+        margin-bottom: 0;
+    }
+    .tooltips  {
+        font-size: 1rem;
+    }
+    .tooltips .tooltip-txt {
+        background-color: #273549;
+        color: #ECFDF5;
+    }
+
+
+
+    .password-container{
+        flex-direction: row;
+        margin-top: 7em;
+        gap: 1em;
+        border-top: 1px solid #D5D4D8;
+        padding-top: 1em;
+        
+    }
+
+    h1 {
+
+        margin-top: 4em;
+        color: #2B283A;
+    }
+
+    h1 span {
+        font-size: 2rem;
+    }
+
+    p {
+        color: #6B7280;
+    }
+
+    button {
+        position: absolute;
+        width: 41%;
+        top: 50%;
+        margin: 22px 0 0;
+        z-index: -1;
+        font-size: 1rem;
+        padding: .8em;
+        
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+
+
+

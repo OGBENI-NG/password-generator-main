@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="index.css">    
+    <title>Password-generator</title>
+</head>
+
+<body>
+    <div class="desktop-container">
+        <div class="container">
+            <div class="text-con">
+                <h1>Generate a <span>random password</span></h1>
+                <p>Never use an insecure  password again.</p>
+            </div>
+            <div class="password-container">
+                <div class="tooltips tooltipss">
+                    <span class="tooltip-txt" id="tooltip-txt">Copy-Text</span>
+                    <span id="password-field1" class="password-field">Click To Copy</span>
+                </div>
+                <div class="tooltips">
+                    <span class="tooltip-txt" id="tooltip-txt2">Copy-Text</span>
+                    <span id="password-field2" class="password-field">Click To Copy</span>
+                </div>
+            </div>
+            <button onclick="generateRandomPassword()">🎡 Generate Password</button>
+        </div>
+    </div>
+    
+    
+    <footer>
+        <h4>Powered by Scrimba</h4>
+        <p>Copy right C2022</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
