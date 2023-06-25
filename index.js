@@ -14,7 +14,7 @@ const passwordLengthEl = document.getElementById("password-length")
 const passwordTxtEl = document.getElementById("password-txt")
 const minusEl = document.getElementById("minus")
 const plusEl = document.getElementById("plus")
-let passwordLength = 13
+let passwordLength = 12
 let randomPassword1 = ""
 let randomPassword2 = ""
 
