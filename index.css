@@ -166,12 +166,13 @@ footer  p {
     .container {
         position: fixed;
         width: 90%;
-        max-width: 550px;
+        max-width: 600px;
         border-radius: 5px;
         left: 0;
         top: 0;
         right: 0;
-        margin: 2em auto;
+        bottom: 0;
+        margin: auto;
         background: #ECFDF5;
         height: max-content;
         
