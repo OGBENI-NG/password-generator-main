@@ -7,6 +7,7 @@ body {
     padding: 0;
     font-family: 'Andika', sans-serif;
     user-select: none;
+    user-zoom: none;
 }
 
 .container {
@@ -72,8 +73,6 @@ button, .tooltips {
     cursor: pointer;
 }
 
-
-
 .length-container {
     text-align: center;
     background-color: #0f172a;
@@ -81,6 +80,9 @@ button, .tooltips {
     margin: 30px auto -40px;
     padding: 20px;
     border-radius: 10px;
+    user-select: none;
+    user-zoom: none;
+    
 }
 .length-container p {
     margin: 0 0 8px;
@@ -111,8 +113,6 @@ button, .tooltips {
     box-shadow: 0px 0px 8px #4ADF86;
 }
 
-
-
 .password-container {
     display: flex;
     flex-direction: column;
@@ -129,7 +129,7 @@ button, .tooltips {
     letter-spacing: 1.5px;
     border-radius: 5px;
     position: relative;
-    margin: 2em 0 0;
+    margin: 1.2em 0 0;
     padding: .7em;
     font-size: 1.5rem;
     
@@ -173,24 +173,26 @@ button, .tooltips {
 footer {
     text-align:  center;
     background-color: #273549;
-    padding: 1em;
-    line-height: 1.2;
+    padding: .8em;
     position: fixed;
     right: 0;
     left: 0;
     bottom: 0;
     margin: 50px auto 0;
+    height: 70px;
 }
 
 footer h4 {
     font-weight: 700;
     color: #c4c4c4;
+    margin: 0;
     
 }
 
 footer  p {
     font-size: .9rem;
     color: #6a6a6a;
+    margin: 0;
   
 }
 
