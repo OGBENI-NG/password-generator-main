@@ -56,7 +56,7 @@ button {
     border: none;
     border-radius: 6px; 
     color: #F3F3F9;
-    background: #10B981;
+    background: #4ADF86;
     width: 100%;
     text-shadow: 0px 0px 1px #1C1C1C;
     font-size: 1.2rem;
@@ -72,10 +72,43 @@ button, .tooltips {
     cursor: pointer;
 }
 
-button:hover {
-    background: #273549;
-    border: 0.5px solid #F3F3F9;
-    color: #4ADF86;
+
+
+.length-container {
+    text-align: center;
+    background-color: #0f172a;
+    width: 100%;
+    margin: 30px auto -40px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.length-container p {
+    margin: 0 0 8px;
+    text-transform: capitalize;
+}
+
+.increment-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.increment-btn-container span {
+    display: block;
+    font-size: 1.8rem;
+    color: #6B7280;
+    transition: all .3s ease-in-out;
+    text-shadow: 1px 1px 2px #10B981;
+}
+.increments-btn {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    margin: 0;
+    margin-top: 10px;
+    background-color: #1e293b93;
+    color: #10B981;
+    box-shadow: 0px 0px 8px #4ADF86;
 }
 
 
@@ -167,7 +200,7 @@ footer  p {
         position: fixed;
         width: 90%;
         max-width: 600px;
-        border-radius: 5px;
+        border-radius: 10px;
         left: 0;
         top: 0;
         right: 0;
@@ -208,8 +241,9 @@ footer  p {
         font-size: 2rem;
     }
 
-    p {
+    .bio {
         color: #6B7280;
+        margin-top: -5px;
     }
 
     button {
@@ -220,8 +254,48 @@ footer  p {
         z-index: -1;
         font-size: 1rem;
         padding: .8em;
+        background-color: #4ADF86;
     }
+    button:hover {
+        background: #1F1B36;
+        border: 0.5px solid #6B7280;
+        color: #4ADF86;
+    }
+    .length-container {
+        width: 50%;
+        margin-left: auto;
+        position: absolute;
+        top: 215px;
+        right: 40px;
+        right: 10px;
+        background-color: transparent;
+    }
+    .length-container p {
+        font-size: .789rem;
+        margin-bottom: 3px;
+        color: #6B7280;
 
+    }
+    .increment-btn-container {
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+    .increments-btn {
+        position: absolute;
+        z-index: 2;
+        height: 40px;
+        width: 40px;
+        top: -7px;
+        background-color: #10B981;
+        color: #ECFDF5;
+    }
+    .increments-btn:first-child {
+        left: 50px;
+    }
+    .second {
+        right: 50px;
+    }
     footer {
         display: none;
     }

@@ -10,15 +10,27 @@ const passwordElOne = document.getElementById("password-field1")
 const passwordElTwo = document.getElementById("password-field2")
 const tooltipTxt = document.getElementById("tooltip-txt")
 const tooltipTxt2 = document.getElementById("tooltip-txt2")
-let passwordLength = 12
+const passwordLengthEl = document.getElementById("password-length")
+const passwordTxtEl = document.getElementById("password-txt")
+const minusEl = document.getElementById("minus")
+const plusEl = document.getElementById("plus")
+let passwordLength = 13
 let randomPassword1 = ""
 let randomPassword2 = ""
 
+passwordLengthEl.textContent = passwordLength
+plusEl.addEventListener('click', () => {
+    passwordLength++
+    passwordLengthEl.textContent = passwordLength
+})
 
-
+minusEl.addEventListener('click', () => {
+    passwordLength--
+    passwordLengthEl.textContent = passwordLength
+})
 
 // getting random password function
-const getRandomCharacter = () => {
+function getRandomCharacter() {
     let passwordChar1 = Math.floor( Math.random() * characters.length)
     return characters[passwordChar1]
 }
@@ -33,6 +45,7 @@ function generateRandomPassword() {
     
     tooltipTxt2.textContent = 'Copy-Text'
     tooltipTxt.textContent = 'Copy-Text'
+
     for (let i = 0; i < passwordLength; i++) {
         randomPassword1 += getRandomCharacter()
         randomPassword2 += getRandomCharacter()
@@ -51,7 +64,6 @@ passwordElOne.addEventListener('click', () => {
     }, 1000)
 
 })
-
 
 passwordElTwo.addEventListener('click', () => {
     navigator.clipboard.writeText(passwordElTwo.textContent)
