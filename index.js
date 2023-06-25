@@ -11,23 +11,55 @@ const passwordElTwo = document.getElementById("password-field2")
 const tooltipTxt = document.getElementById("tooltip-txt")
 const tooltipTxt2 = document.getElementById("tooltip-txt2")
 const passwordLengthEl = document.getElementById("password-length")
-const passwordTxtEl = document.getElementById("password-txt")
+const passwordTxtEl = document.querySelector(".password-txt")
 const minusEl = document.getElementById("minus")
 const plusEl = document.getElementById("plus")
-let passwordLength = 12
+let passwordLength = 15
 let randomPassword1 = ""
 let randomPassword2 = ""
+let disabled = false
+
 
 passwordLengthEl.textContent = passwordLength
-plusEl.addEventListener('click', () => {
+plusEl.addEventListener('click', (e) => {
+    e.preventDefault()
     passwordLength++
     passwordLengthEl.textContent = passwordLength
+    update()
 })
 
-minusEl.addEventListener('click', () => {
+minusEl.addEventListener('click', (e) => {
+    e.preventDefault()
     passwordLength--
     passwordLengthEl.textContent = passwordLength
+    update()
 })
+
+function update() {
+    if (passwordLength <= 5) {
+        minusEl.disabled = true;
+        plusEl.disabled = false;
+    } else if (passwordLength < 8) {
+        passwordTxtEl.textContent = "Weak";
+        passwordTxtEl.className = "weak-password";
+        plusEl.disabled = false;
+    } else if (passwordLength > 8 && passwordLength <= 11) {
+        passwordTxtEl.textContent = "Good";
+        passwordTxtEl.className = "good-password";
+        plusEl.disabled = false;
+    } else if (passwordLength >= 11 && passwordLength <= 13) {
+        passwordTxtEl.textContent = "Strong";
+        passwordTxtEl.className = "strong-password";
+        plusEl.disabled = false;
+    } else if(passwordLength >= 15) {
+        plusEl.disabled = true;
+    } else {
+        minusEl.disabled = false;
+        plusEl.disabled = false;
+    }
+}
+
+
 
 // getting random password function
 function getRandomCharacter() {
@@ -57,9 +89,9 @@ function generateRandomPassword() {
 passwordElOne.addEventListener('click', () => {
     navigator.clipboard.writeText(passwordElOne.textContent)
     tooltipTxt.textContent = "Copied"
-    passwordElOne.textContent = ''
+    passwordElOne.textContent = 'Copied'
     setTimeout(() => {
-        passwordElOne.textContent += randomPassword1
+        passwordElOne.textContent = randomPassword1
         tooltipTxt.style.display = "none"
     }, 1000)
 
@@ -68,7 +100,7 @@ passwordElOne.addEventListener('click', () => {
 passwordElTwo.addEventListener('click', () => {
     navigator.clipboard.writeText(passwordElTwo.textContent)
     tooltipTxt2.textContent = "Copied"
-    passwordElTwo.textContent = ''
+    passwordElTwo.textContent = 'Copied'
     setTimeout(() => {
         passwordElTwo.textContent = randomPassword2
         tooltipTxt2.style.display = "none"

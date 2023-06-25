@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+html, body {
+    touch-action: manipulation;
+}
 body {
     margin: 0;
     background: #1C1C1C;
@@ -8,6 +11,27 @@ body {
     font-family: 'Andika', sans-serif;
     user-select: none;
     user-zoom: none;
+}
+/* password-length notification */
+.weak-password, 
+.good-password, 
+.strong-password{
+    color: #EF4444;
+    text-shadow: 1px 1px 9px #510A0A;
+    display: inline-block;
+    width: max-content;
+    background-color: #1F1B36;
+    padding: 10px;
+    border-radius:10px;
+    font-weight: 700;
+}
+
+.good-password {
+    color: #F59E0B;
+}
+
+.strong-password {
+    color: #3CB35A;
 }
 
 .container {
@@ -78,7 +102,7 @@ button, .tooltips {
     background-color: #0f172a;
     width: 100%;
     margin: 30px auto -40px;
-    padding: 20px;
+    padding: 20px 20px 30px;
     border-radius: 10px;
     user-select: none;
     user-zoom: none;
@@ -121,13 +145,14 @@ button, .tooltips {
 }
 
 .tooltips {
+    
     width: 100%;
     background-color: #0f172a;
     color: #10B981;
     text-align: center;
     font-weight: 400;
     letter-spacing: 1.5px;
-    border-radius: 5px;
+    border-radius: 10px;
     position: relative;
     margin: 1.2em 0 0;
     padding: .7em;
@@ -139,6 +164,7 @@ button, .tooltips {
 }
 
 .tooltips .tooltip-txt {
+    display: none;
     visibility: hidden;
     width: 100%;
     background-color: #ECFDF5;
@@ -154,6 +180,7 @@ button, .tooltips {
   }
   
 .tooltips .tooltip-txt::after {
+    display: none;
     content: "";
     position: absolute;
     top: 100%;
@@ -165,7 +192,7 @@ button, .tooltips {
   
 .tooltips:hover .tooltip-txt {
     display: none;
-    visibility: visible;
+    visibility: hidden;
     opacity: 1;
 }
 
@@ -225,13 +252,21 @@ footer  p {
         background-color: #273549;
         color: #ECFDF5;
     }
+    .tooltips .tooltip-txt::after{
+        display: block;
+    }
+    .tooltips:hover .tooltip-txt {
+        visibility: visible;
+    }
     .password-container{
         flex-direction: row;
         margin-top: 7em;
         gap: 1em;
         border-top: 1px solid #D5D4D8;
         padding-top: 1em;
-        
+    }
+    .tooltips .tooltip-txt {
+        display: block;
     }
 
     h1 {
@@ -244,7 +279,7 @@ footer  p {
     }
 
     .bio {
-        color: #6B7280;
+        color: #273549;
         margin-top: -5px;
     }
 
@@ -267,7 +302,7 @@ footer  p {
         width: 50%;
         margin-left: auto;
         position: absolute;
-        top: 215px;
+        top: 200px;
         right: 40px;
         right: 10px;
         background-color: transparent;
@@ -275,7 +310,7 @@ footer  p {
     .length-container p {
         font-size: .789rem;
         margin-bottom: 3px;
-        color: #6B7280;
+       
 
     }
     .increment-btn-container {
@@ -295,6 +330,16 @@ footer  p {
     .increments-btn:first-child {
         left: 50px;
     }
+    .weak-password, 
+    .good-password, 
+    .strong-password {
+
+        background-color: unset;
+        padding: unset;
+        margin: unset;
+        text-shadow: unset;
+    }
+    
     .second {
         right: 50px;
     }
