@@ -59,13 +59,13 @@ function update() {
         plusEl.disabled = false
     }
 
-    passwordLengthWrapper.style.transition = "opacity 0.5s ease-in-out";
+    passwordLengthWrapper.style.transition = "opacity 0.4s ease-in-out";
     passwordLengthWrapper.style.opacity = 0;
   
     setTimeout(() => {
       passwordLengthEl.textContent = passwordLength;
       passwordLengthWrapper.style.opacity = 1;
-    }, 250);
+    }, 260);
 }
 
 function updateCopyPw() {
