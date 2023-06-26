@@ -39,11 +39,11 @@ function update() {
     if (passwordLength <= 5) {
         minusEl.disabled = true
         plusEl.disabled = false
-    } else if (passwordLength < 8) {
+    } else if (passwordLength < 7 || passwordLength < 8) {
         passwordTxtEl.textContent = "Weak"
         passwordTxtEl.className = "weak-password"
         plusEl.disabled = false
-    } else if (passwordLength > 8 && passwordLength <= 11) {
+    } else if (passwordLength > 7 && passwordLength <= 11) {
         passwordTxtEl.textContent = "Good"
         passwordTxtEl.className = "good-password"
         plusEl.disabled = false
@@ -60,11 +60,11 @@ function update() {
 }
 
 function updateCopyPw() {
-    if (passwordLength <= 8 ) {
+    if (passwordLength <= 7 || passwordLength < 8) {
         passwordElOne.className = "weak-password"
         passwordElTwo.className = "weak-password"
        
-    } else if (passwordLength > 8 && passwordLength <= 11) {
+    } else if (passwordLength > 7 && passwordLength <= 11) {
         passwordElOne.className = "good-password"
         passwordElTwo.className = "good-password"
         
