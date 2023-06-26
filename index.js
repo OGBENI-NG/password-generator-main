@@ -60,12 +60,12 @@ function update() {
     }
 
     passwordLengthWrapper.style.transition = "opacity 0.4s ease-in-out";
-    passwordLengthWrapper.style.opacity = 0;
+    passwordLengthWrapper.style.opacity = 0.5;
   
     setTimeout(() => {
       passwordLengthEl.textContent = passwordLength;
       passwordLengthWrapper.style.opacity = 1;
-    }, 260);
+    }, 250);
 }
 
 function updateCopyPw() {
