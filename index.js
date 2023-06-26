@@ -24,15 +24,15 @@ passwordLengthEl.textContent = passwordLength
 plusEl.addEventListener('click', (e) => {
     e.preventDefault()
     passwordLength++
-    passwordLengthEl.textContent = passwordLength
     update()
+    passwordLengthEl.textContent = passwordLength
 })
 
 minusEl.addEventListener('click', (e) => {
     e.preventDefault()
     passwordLength--
-    passwordLengthEl.textContent = passwordLength
     update()
+    passwordLengthEl.textContent = passwordLength
 })
 
 function update() {
@@ -59,7 +59,7 @@ function update() {
         plusEl.disabled = false
     }
 
-    passwordLengthWrapper.style.transition = "opacity 0.4s ease-in-out";
+    passwordLengthWrapper.style.transition = "opacity 0.5s ease-in-out";
     passwordLengthWrapper.style.opacity = 0;
   
     setTimeout(() => {
