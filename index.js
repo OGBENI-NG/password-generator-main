@@ -59,6 +59,26 @@ function update() {
     }
 }
 
+function updateCopyPw() {
+    if (passwordLength <= 8 ) {
+        passwordElOne.className = "weak-password"
+        passwordElTwo.className = "weak-password"
+       
+    } else if (passwordLength > 8 && passwordLength <= 11) {
+        passwordElOne.className = "good-password"
+        passwordElTwo.className = "good-password"
+        
+    } else if (passwordLength >= 11 && passwordLength <= 15) {
+        passwordElOne.className = "strong-password"
+        passwordElTwo.className = "strong-password"
+        
+    } else {
+        passwordElOne.className = "password-field"
+        passwordElTwo.className = "password-field"
+    } 
+        
+}
+
 // getting random password function
 function getRandomCharacter() {
     let passwordChar1 = Math.floor( Math.random() * characters.length)
@@ -75,11 +95,12 @@ function generateRandomPassword() {
     
     tooltipTxt2.textContent = 'Copy-Text'
     tooltipTxt.textContent = 'Copy-Text'
-
+    
     for (let i = 0; i < passwordLength; i++) {
         randomPassword1 += getRandomCharacter()
         randomPassword2 += getRandomCharacter()
     }
+    updateCopyPw()
     passwordElOne.textContent = randomPassword1
     passwordElTwo.textContent = randomPassword2
 }
