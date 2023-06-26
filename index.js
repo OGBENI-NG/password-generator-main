@@ -14,7 +14,7 @@ const passwordLengthEl = document.getElementById("password-length")
 const passwordTxtEl = document.querySelector(".password-txt")
 const minusEl = document.getElementById("minus")
 const plusEl = document.getElementById("plus")
-let passwordLength = 15
+let passwordLength = 12
 let randomPassword1 = ""
 let randomPassword2 = ""
 let disabled = false
@@ -37,29 +37,27 @@ minusEl.addEventListener('click', (e) => {
 
 function update() {
     if (passwordLength <= 5) {
-        minusEl.disabled = true;
-        plusEl.disabled = false;
+        minusEl.disabled = true
+        plusEl.disabled = false
     } else if (passwordLength < 8) {
-        passwordTxtEl.textContent = "Weak";
-        passwordTxtEl.className = "weak-password";
-        plusEl.disabled = false;
+        passwordTxtEl.textContent = "Weak"
+        passwordTxtEl.className = "weak-password"
+        plusEl.disabled = false
     } else if (passwordLength > 8 && passwordLength <= 11) {
-        passwordTxtEl.textContent = "Good";
-        passwordTxtEl.className = "good-password";
-        plusEl.disabled = false;
+        passwordTxtEl.textContent = "Good"
+        passwordTxtEl.className = "good-password"
+        plusEl.disabled = false
     } else if (passwordLength >= 11 && passwordLength <= 13) {
-        passwordTxtEl.textContent = "Strong";
-        passwordTxtEl.className = "strong-password";
-        plusEl.disabled = false;
+        passwordTxtEl.textContent = "Strong"
+        passwordTxtEl.className = "strong-password"
+        plusEl.disabled = false
     } else if(passwordLength >= 15) {
-        plusEl.disabled = true;
+        plusEl.disabled = true
     } else {
-        minusEl.disabled = false;
-        plusEl.disabled = false;
+        minusEl.disabled = false
+        plusEl.disabled = false
     }
 }
-
-
 
 // getting random password function
 function getRandomCharacter() {

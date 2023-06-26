@@ -17,21 +17,19 @@ body {
 .good-password, 
 .strong-password{
     color: #EF4444;
-    text-shadow: 1px 1px 9px #510A0A;
+    text-shadow: 1px 1px 10px #a80000;
     display: inline-block;
-    width: max-content;
-    background-color: #1F1B36;
-    padding: 10px;
-    border-radius:10px;
     font-weight: 700;
 }
 
 .good-password {
     color: #F59E0B;
+    text-shadow: 1px 1px 10px #FB6012;
 }
 
 .strong-password {
     color: #3CB35A;
+    text-shadow: 1px 1px 10px #34C5C5;
 }
 
 .container {
@@ -330,14 +328,16 @@ footer  p {
     .increments-btn:first-child {
         left: 50px;
     }
-    .weak-password, 
-    .good-password, 
+    .weak-password {
+        text-shadow: 1px 1px 10px #a20202;
+    }
+    .good-password {
+        
+        text-shadow: 1px 1px 10px #FB6012;
+    }
     .strong-password {
-
-        background-color: unset;
-        padding: unset;
-        margin: unset;
-        text-shadow: unset;
+    
+        text-shadow: 1px 1px 12px #34C5C5;
     }
     
     .second {
