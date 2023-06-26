@@ -36,6 +36,7 @@ minusEl.addEventListener('click', (e) => {
 })
 
 function update() {
+    const passwordLengthWrapper = document.getElementById("password-length-wrapper");
     if (passwordLength <= 5) {
         minusEl.disabled = true
         plusEl.disabled = false
@@ -57,6 +58,14 @@ function update() {
         minusEl.disabled = false
         plusEl.disabled = false
     }
+
+    passwordLengthWrapper.style.transition = "opacity 0.4s ease-in-out";
+    passwordLengthWrapper.style.opacity = 0;
+  
+    setTimeout(() => {
+      passwordLengthEl.textContent = passwordLength;
+      passwordLengthWrapper.style.opacity = 1;
+    }, 250);
 }
 
 function updateCopyPw() {

@@ -305,6 +305,11 @@ footer  p {
         display: block;
         position: relative;
     }
+    .increment-btn-container span {
+        color: #34C5C5;
+        
+    }
+    
     .increments-btn {
         position: absolute;
         z-index: 2;
